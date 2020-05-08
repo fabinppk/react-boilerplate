@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Montserrat:400,600,700');
+
+/*imports que precisam ser globais*/
+/*imports globais são os que precisam ter o nome da classe sem hashs*/
+/*com hash: .card -> [componente_name]_card_[hash:base64:5]_*/
+/*sem hash: .card -> card_*/
+
+@import '~bootstrap/dist/css/bootstrap-grid.css';
+
+* {
+    box-sizing: border-box;
+    font-family: $font-primary;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $app-background;
+    height: 100%;
+    overflow-x: hidden;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    label,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        padding: 0;
+    }
+
+    button {
+        outline: 0;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 26px;
+        margin: 0;
+        color: $color-grey-3;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-grey-3;
+    }
+
+    span {
+        color: $color-grey-3;
+    }
+
+    footer {
+        background: $app-background;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 $global-padding;
+    flex-wrap: wrap;
+
+    .wrapperContent {
+        width: 100%;
+        max-width: $width-site;
+        position: relative;
+    }
+}

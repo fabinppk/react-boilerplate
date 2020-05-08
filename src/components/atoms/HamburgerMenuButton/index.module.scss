@@ -1,0 +1,84 @@
+.hambclicker,
+.hambmenu {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .hambmenu {
+        display: block;
+        position: absolute;
+        right: 30px;
+        width: 30px;
+        height: 25px;
+        top: 20px;
+        transition: $transition-time $transition-type;
+        cursor: pointer;
+
+        &.isOpen {
+            span {
+                &:nth-child(1) {
+                    top: 18px;
+                    width: 0%;
+                    left: 50%;
+                    opacity: 0;
+                }
+
+                &:nth-child(2) {
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                }
+
+                &:nth-child(4) {
+                    top: 18px;
+                    width: 0%;
+                    left: 50%;
+                    opacity: 0;
+                }
+            }
+        }
+
+        span {
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            vertical-align: middle;
+            background: $color-primary;
+            border-radius: 8px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: $transition-time $transition-type;
+            padding: 0px;
+
+            &:nth-child(1) {
+                top: 0px;
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                top: 10px;
+            }
+
+            &:nth-child(4) {
+                top: 20px;
+            }
+        }
+    }
+
+    .hambclicker {
+        display: block;
+        content: '';
+        height: 44px;
+        background: transparent;
+        border: none;
+        width: 50px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 10;
+    }
+}

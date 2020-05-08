@@ -1,0 +1,30 @@
+.menu {
+    display: flex;
+    flex: 1;
+    background: $color-white;
+}
+
+.menuItem {
+    display: flex;
+    color: $color-primary;
+    padding: 0 15px;
+    cursor: pointer;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    &.activeItem {
+        color: $color-secondary;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu {
+        display: none;
+    }
+
+    .menuItem {
+        padding: 10px;
+    }
+}
